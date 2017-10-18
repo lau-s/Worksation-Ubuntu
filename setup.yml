@@ -1,0 +1,29 @@
+---
+- hosts: localhost
+  connection: local
+  sudo: yes
+  vars_files:
+    - vars.yml
+
+
+  tasks:
+#install key & repo for spotify
+    - shell: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+    - shell: echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
+
+    - include: roles/apps.yml tags=apps
+  #  - include: roles/debs.yml tags=debs
+  #  - include: roles/git.yml tags=git
+  #  - include: roles/keys.yml tags=keys
+
+    - shell: git config --global user.name "lau-s"
+    - shell: git config --global user.email "laureano.stella@gmail.com"
+    - shell: git config --global core.editor vim
+
+
+
+
+
+  
+

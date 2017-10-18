@@ -1,0 +1,11 @@
+# Install and configure system apps
+#
+#
+# Copyright (C) 2017 Laureano Stella <laureano@stella.me>
+#
+# This part of software is released under the terms of the GPLv3 license.
+#
+---
+ name: GIT setup username
+  shell: 'git config --global user.name "lau-s"'
+

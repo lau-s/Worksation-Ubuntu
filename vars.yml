@@ -1,0 +1,27 @@
+---
+user: fat32
+user_home: /home/$user
+
+#deb URLS
+url_chrome: 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+url_dropbox: 'https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb'
+url_atom: 'https://atom.io/download/deb'
+
+#deb PKG
+deb_chrome: chrome-browser
+deb_dropbox: dropbox
+deb_atom: atom
+
+#repos
+repo_spotify: http://repository.spotify.com stable non-free
+
+#keys
+key_spotify: adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+
+
+# backup
+
+# USB
+
+# remote server
+

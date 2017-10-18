@@ -1,0 +1,21 @@
+# Install and configure system apps
+#
+#
+# Copyright (C) 2013 Calogero Lo Leggio <kalos@nerdrug.org>
+#
+# This part of software is released under the terms of the GPLv3 license.
+#
+---
+- name: install system apps
+  apt: pkg= $item state=installed
+  with_items:
+    - vim
+    - less
+    - psmisc
+    - htop 
+    - iotop
+    - git
+    - tree
+    - ack-grep
+    - autojump
+- lftp

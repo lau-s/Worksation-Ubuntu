@@ -1,0 +1,40 @@
+# Install and configure system apps
+#
+#
+# Copyright (C) 2017 Laureano Stella <laureano@stella.me>
+#
+# This part of software is released under the terms of the GPLv3 license.
+#
+---
+- name: Creates directory for download
+  file: path=/home/{{ user }}/Downloads/Temp/ state=directory
+
+- name: Download Chrome-browser
+  get_url: url="{{ url_chrome }}"
+    dest="/home/{{ user }}/Downloads/Temp/{{ deb_chrome }}.deb"
+
+- name: Install Chrome-browser
+  apt: deb="/home/{{ user }}/Downloads/Temp/{{ deb_chrome }}.deb"
+    state=present
+  sudo: true
+
+- name: Download Atom-editor
+  get_url: url="{{ url_atom }}"
+    dest="/home/{{ user }}/Downloads/Temp/{{ deb_atom }}.deb"
+
+- name: Install Atom-editor
+  apt: deb="/home/{{ user }}/Downloads/Temp/{{ deb_atom }}.deb"
+    state=present
+  sudo: true
+
+- name: Download Dropbox
+  get_url: url="{{ url_dropbox }}"
+    dest="/home/{{ user }}/Downloads/Temp/{{ deb_dropbox }}.deb"
+
+- name: Install Dropbox
+  apt: deb="/home/{{ user }}/Downloads/Temp/{{ deb_dropbox }}.deb"
+    state=present
+  sudo: true
+
+- name: Remove directory for download
+  file: path=/home/{{ user }}/Downloads/Temp/ state=absent

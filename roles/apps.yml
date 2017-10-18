@@ -1,0 +1,60 @@
+# Install and configure system apps
+#
+#
+# Copyright (C) 2017 Laureano Stella <laureano@stella.me>
+#
+# This part of software is released under the terms of the GPLv3 license.
+#
+---
+
+- name: install the latest version of git
+  package:
+    name: git
+    state: latest
+
+- name: install the latest version of vim
+  package:
+    name: vim
+    state: latest
+
+- name: install the latest version of nano
+  package:
+    name: nano
+    state: latest
+
+- name: install the latest version of vlc
+  package:
+    name: vlc
+    state: latest
+
+- name: install the latest version of guake
+  package:
+    name: guake
+    state: latest
+
+- name: install the latest version of firefox
+  package:
+    name: firefox
+    state: latest
+
+- name: install the latest version of Slack
+  package:
+    name: slack
+    state: latest
+
+- apt_repository:
+    repo: 'ppa:numix/ppa'
+
+- name: Numix Packages
+  package:
+    name: numix-gtk-theme
+    state: latest
+  package:
+    name: numix-icon-theme-circle
+    state: latest
+  package:
+    name: numix-wallpaper-*
+    state: latest
+
+   
+

@@ -1,0 +1,10 @@
+# Install and configure system apps
+#
+#
+# Copyright (C) 2017 Laureano Stella <laureano@stella.me>
+#
+# This part of software is released under the terms of the GPLv3 license.
+#
+---
+- apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+
